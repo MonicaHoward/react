@@ -8,6 +8,7 @@ export default function TodoList(){
     const {state, dispatch} = useContext(TodosContext)
 
 
+
     return(
         <div>
             <ul>
@@ -17,11 +18,12 @@ export default function TodoList(){
                 >
                     <span
                         onDoubleClick={() => dispatch({type: "TOGGLE_ITEM", payload: item})}
+                        className={`todo-item ${item.complete && "strike-through text-gray-darkest"}`}
                     >
                         {item.text}
                     </span>
                     <span
-                        onClick={() => dispatch({type: "UPDATE_ITEM", payload: item})}
+                        onClick={() => dispatch({type: "SET_CURRENT_ITEM", payload: item})}
                     >
                         EDIT
                     </span>
