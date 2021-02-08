@@ -18,7 +18,10 @@ const TodosContext = React.createContext({
             complete: false
         }
 
-    ]
+    ],
+    currentItem: {
+        
+    }
 })
 
 export default TodosContext;
