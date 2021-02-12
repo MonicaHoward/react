@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.strike-through {
+  text-decoration: line-through;
+  color: rgb(138, 134, 134)
+}
